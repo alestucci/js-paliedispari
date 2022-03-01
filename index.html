@@ -1,13 +1,40 @@
 <!DOCTYPE html>
 <html lang="it">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Document</title>
-</head>
-<body>
-    <script src="script.js"></script>
-</body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="style.css" />
+		<title>Document</title>
+	</head>
+	<body>
+		<div class="container">
+			<section class="palindrome">
+				<h2>Scopri se la parola è palindroma</h2>
+				<label for="word" class="block">Inserisci una parola o un'espressione</label>
+				<input type="text" id="word" class="block center w-50"/>
+                <a href="#" class="button">Check</a>
+				<h3 id="palindrome-output"></h3>
+			</section>
+        </div>
+        <div class="container">
+			<section class="even-odd">
+				<h2>Gioca a Pari o dispari</h2>
+				<label for="number">Inserisci un numero da 1 a 5</label>
+				<input type="number" id="number" min="1" max="5" />
+                <div>
+                    <label for="selection">Scegli <span class="underline">pari</span> o <span class="underline">dispari</span></label>
+                    <select name="selection" id="selection">
+                        <option value="even">Pari</option>
+                        <option value="odd">Dispari</option>
+                    </select>
+                </div>
+                <a href="#" class="button">Gioca</a>
+                <h4>Il computer ha totalizzato <span id="pc-number"></span></h4>
+                <h3 id="eve-odd-output"></h3>
+			</section>
+		</div>
+
+		<script src="script.js"></script>
+	</body>
 </html>

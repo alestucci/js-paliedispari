@@ -29,39 +29,39 @@ Stabiliamo se la somma dei due numeri è pari o dispari (usando una funzione)
 Dichiariamo chi ha vinto.
 */
 
-const userNumber = parseInt(prompt("Inserisci un numero da 1 a 5"));
-const userEvenOdd = prompt('Inserisci "Pari" o "Dispari"');
-console.log(userNumber);
-console.log(userEvenOdd);
+// const userNumber = parseInt(prompt("Inserisci un numero da 1 a 5"));
+// const userEvenOdd = prompt('Inserisci "Pari" o "Dispari"');
+// console.log(userNumber);
+// console.log(userEvenOdd);
 
-let userEven = false;
+// let userEven = false;
 
-if (userEvenOdd.toLowerCase() == "pari") {
-	userEven = true;
-}
+// if (userEvenOdd.toLowerCase() == "pari") {
+// 	userEven = true;
+// }
 
-console.log('pari? ' + userEven)
+// console.log('pari? ' + userEven)
 
-function randomHandNumber() {
-	return Math.floor(Math.random() * 5 + 1);
-}
+// function randomHandNumber() {
+// 	return Math.floor(Math.random() * 5 + 1);
+// }
 
-const pcNumber = randomHandNumber();
-console.log(pcNumber);
-const sum = userNumber + pcNumber;
-console.log(sum);
+// const pcNumber = randomHandNumber();
+// console.log(pcNumber);
+// const sum = userNumber + pcNumber;
+// console.log(sum);
 
-function isEven(number) {
-	const remainder = number % 2;
-	if (remainder == 0) {
-		return true;
-	} else {
-		return false;
-	}
-}
+// function isEven(number) {
+// 	const remainder = number % 2;
+// 	if (remainder == 0) {
+// 		return true;
+// 	} else {
+// 		return false;
+// 	}
+// }
 
-if (userEven == isEven(sum)) {
-	console.log("HAI VINTO!");
-} else {
-	console.log("HAI PERSO!");
-}
+// if (userEven == isEven(sum)) {
+// 	console.log("HAI VINTO!");
+// } else {
+// 	console.log("HAI PERSO!");
+// }
