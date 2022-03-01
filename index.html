@@ -8,33 +8,40 @@
 		<title>Document</title>
 	</head>
 	<body>
-		<div class="container">
-			<section class="palindrome">
-				<h2>Scopri se la parola è palindroma</h2>
-				<label for="word" class="block">Inserisci una parola o un'espressione</label>
-				<input type="text" id="word" class="block center w-50"/>
-                <a href="#" class="button">Check</a>
-				<h3 id="palindrome-output"></h3>
-			</section>
+		<div class="container p-2">
+            <h2>Scopri se la parola è &#128260; palindroma &#128260;</h2>
+            <label for="word" class="block mt-1-5">Inserisci una parola o un'espressione</label>
+            <input type="text" id="word" class="center w-100 m-2"/>
+            <div>
+                <a href="#" class="button" id="check">Check</a>
+            </div>
+            <div>
+                <h3 id="palindrome-output">. . .</h3>
+            </div>
+            <div class="m-2">
+                <a href="#" class="button" id="reset-palindrome">Reset</a>
+            </div>
         </div>
-        <div class="container">
-			<section class="even-odd">
-				<h2>Gioca a Pari o dispari</h2>
-				<label for="number">Inserisci un numero da 1 a 5</label>
-				<input type="number" id="number" min="1" max="5" />
-                <div>
-                    <label for="selection">Scegli <span class="underline">pari</span> o <span class="underline">dispari</span></label>
-                    <select name="selection" id="selection">
-                        <option value="even">Pari</option>
-                        <option value="odd">Dispari</option>
-                    </select>
-                </div>
-                <a href="#" class="button">Gioca</a>
-                <h4>Il computer ha totalizzato <span id="pc-number"></span></h4>
-                <h3 id="eve-odd-output"></h3>
-			</section>
+        <div class="container p-2">
+            <h2>Gioca a &#129305; Pari o dispari &#129306;</h2>
+            <label for="number">Inserisci un numero da 1 a 5</label>
+            <input type="number" id="number" min="1" max="5" />
+            <div>
+                <label for="selection">Scegli <span class="underline">pari</span> o <span class="underline">dispari</span></label>
+                <select name="selection" id="selection">
+                    <option value="even">Pari</option>
+                    <option value="odd">Dispari</option>
+                </select>
+            </div>
+            <div>
+                <a href="#" class="button" id="play">Gioca</a>
+            </div>
+            <h4>Il computer gioca con <span id="pc-number">...</span></h4>
+            <div>
+                <h3 id="even-odd-output">. . .</h3>
+            </div>
 		</div>
-
+s
 		<script src="script.js"></script>
 	</body>
 </html>

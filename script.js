@@ -4,21 +4,37 @@ Chiedere all’utente di inserire una parola
 Creare una funzione per capire se la parola inserita è palindroma
 */
 
-// function isPalindrome(word) {
-// 	let wordInverse = "";
-// 	for (let index = word.length - 1; index >= 0; index--) {
-// 		wordInverse += word[index];
-// 	}
-// 	if (word == wordInverse) {
-// 		return true;
-// 	} else {
-// 		return false;
-// 	}
-// }
+function isPalindrome(word) {
+	let wordInverse = "";
+	for (let index = word.length - 1; index >= 0; index--) {
+		wordInverse += word[index];
+	}
+	if (word == wordInverse) {
+		return true;
+	} else {
+		return false;
+	}
+}
 
-// const input = prompt("Inserisci una parola");
+let inputPalindrome = document.querySelector("#word");
+let checkBtnPalindrome = document.querySelector("#check");
+let outputPalindrome = document.querySelector("#palindrome-output");
 
-// console.log(isPalindrome(input));
+checkBtnPalindrome.addEventListener("click", function () {
+	if (isPalindrome(inputPalindrome.value.toLowerCase())) {
+		outputPalindrome.innerHTML = "La parola inserita è palindroma";
+		outputPalindrome.className = "green";
+	} else {
+		outputPalindrome.innerHTML = "La parola inserita NON è palindroma";
+		outputPalindrome.className = "red";
+	}
+});
+
+let resetBtnPalindrome = document.querySelector('#reset-palindrome');
+
+resetBtnPalindrome.addEventListener("click", function () {
+	inputPalindrome.value = "";
+});
 
 /*
 Pari e Dispari
@@ -29,39 +45,40 @@ Stabiliamo se la somma dei due numeri è pari o dispari (usando una funzione)
 Dichiariamo chi ha vinto.
 */
 
-// const userNumber = parseInt(prompt("Inserisci un numero da 1 a 5"));
-// const userEvenOdd = prompt('Inserisci "Pari" o "Dispari"');
-// console.log(userNumber);
-// console.log(userEvenOdd);
+let playBtnEvenOdd = document.querySelector("#play");
+let outputNumberPc = document.querySelector("#pc-number");
+let outputEvenOdd = document.querySelector("#even-odd-output");
 
-// let userEven = false;
+function randomHandNumber() {
+	return Math.floor(Math.random() * 5 + 1);
+}
 
-// if (userEvenOdd.toLowerCase() == "pari") {
-// 	userEven = true;
-// }
+function isEven(number) {
+	const remainder = number % 2;
+	if (remainder == 0) {
+		return true;
+	} else {
+		return false;
+	}
+}
 
-// console.log('pari? ' + userEven)
+playBtnEvenOdd.addEventListener("click", function () {
+	let inputNumber = parseInt(document.querySelector("#number").value);
+    let inputEvenOdd = document.querySelector("#selection").value;
+    let userEven = false;
+	if (inputEvenOdd.toLowerCase() == "even") {
+		userEven = true;
+	}
 
-// function randomHandNumber() {
-// 	return Math.floor(Math.random() * 5 + 1);
-// }
+	const pcNumber = randomHandNumber();
+	outputNumberPc.innerHTML = pcNumber;
+	const sum = inputNumber + pcNumber;
 
-// const pcNumber = randomHandNumber();
-// console.log(pcNumber);
-// const sum = userNumber + pcNumber;
-// console.log(sum);
-
-// function isEven(number) {
-// 	const remainder = number % 2;
-// 	if (remainder == 0) {
-// 		return true;
-// 	} else {
-// 		return false;
-// 	}
-// }
-
-// if (userEven == isEven(sum)) {
-// 	console.log("HAI VINTO!");
-// } else {
-// 	console.log("HAI PERSO!");
-// }
+	if (userEven == isEven(sum)) {
+		outputEvenOdd.innerHTML = "Hai vinto!";
+		outputEvenOdd.className = "green";
+	} else {
+		outputEvenOdd.innerHTML = "Hai perso!";
+		outputEvenOdd.className = "red";
+	}
+});

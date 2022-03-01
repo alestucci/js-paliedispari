@@ -8,24 +8,33 @@ html {
     font-family: sans-serif;
 }
 
+.mt-1 {
+    margin-top: 1em;
+}
+
+.mt-1-5 {
+    margin-top: 1.5em;
+}
+
+.mt-2 {
+    margin-top: 2em;
+}
+
+.m-2 {
+    margin-bottom: 1.5em;
+}
+
+.p-2 {
+    padding: 2em;
+}
+
 .container {
     width: min(80%, 800px);
     margin: 3em auto;
     text-align: center;
-    border: .5px solid black;
+    border: .5px solid lightgrey;
     border-radius: 10px;
-    box-shadow: 0px 10px 15px 5px rgba(154,154,154,0.75);}
-
-section * {
-    margin: 1.5em;
-}
-
-section > div {
-    margin: 0;
-}
-
-span {
-    margin: 0;
+    box-shadow: 0px 10px 15px 5px rgba(154,154,154,0.75);
 }
 
 .block {
@@ -37,8 +46,8 @@ span {
     margin-right: auto;
 }
 
-.w-50 {
-    width: 50%;
+.w-100 {
+    width: 100%;
 }
 
 #number {
@@ -48,4 +57,39 @@ span {
 
 .underline {
     text-decoration: underline;
+}
+
+#palindrome-output,
+#even-odd-output {
+    min-height: 2.5em;
+    line-height: 2.5em;
+    vertical-align: middle;
+    border: lightgrey 1px solid;
+    border-radius: .5em;
+}
+
+.green {
+    background-color: lightgreen;
+    color: green;
+}
+
+.red {
+    background-color: lightcoral;
+    color: crimson;
+}
+input,
+select {
+    height: 2.5em;
+    text-align: center;
+    margin: 0 1em;
+}
+
+a.button {
+    display: inline-block;
+    padding: 1em 2em;
+    border: 1px solid lightgray;
+    background-color: lightgrey;
+    border-radius: .5em;
+    color: black;
+    text-decoration: none;
 }
