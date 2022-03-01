@@ -93,7 +93,7 @@ playBtnEvenOdd.addEventListener("click", function () {
 let resetBtnEvenOdd = document.querySelector("#reset-even-odd");
 
 resetBtnEvenOdd.addEventListener("click", function () {
-	document.querySelector("#number").value = 1;
+	document.querySelector("#number").value = "";
 	document.querySelector("#selection").selectedIndex = 0;
 	outputEvenOdd.innerHTML = ". . .";
 	outputEvenOdd.className = "";
