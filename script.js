@@ -21,10 +21,10 @@ let checkBtnPalindrome = document.querySelector("#check");
 let outputPalindrome = document.querySelector("#palindrome-output");
 
 checkBtnPalindrome.addEventListener("click", function () {
-	if (inputPalindrome.value == "") {
+	if (inputPalindrome.value == "" || inputPalindrome.value.includes(' ')) {
 		outputPalindrome.innerHTML =
-			"Si prega di inserire una parola o un'espressione";
-		outputPalindrome.className = "red";
+			"Si prega di inserire una parola";
+		outputPalindrome.className = "yellow";
 	} else if (isPalindrome(inputPalindrome.value.toLowerCase())) {
 		outputPalindrome.innerHTML = "La parola inserita è palindroma";
 		outputPalindrome.className = "green";
@@ -72,21 +72,24 @@ function isEven(number) {
 playBtnEvenOdd.addEventListener("click", function () {
 	inputNumber = parseInt(document.querySelector("#number").value);
 	inputEvenOdd = document.querySelector("#selection").value;
-	let userEven = false;
-	if (inputEvenOdd.toLowerCase() == "even") {
-		userEven = true;
-	}
-
-	const pcNumber = randomHandNumber();
-	outputNumberPc.innerHTML = pcNumber;
-	const sum = inputNumber + pcNumber;
-
-	if (userEven == isEven(sum)) {
-		outputEvenOdd.innerHTML = "Hai vinto!";
-		outputEvenOdd.className = "green";
+	if (isNaN(inputNumber) || inputNumber == 0 || inputNumber > 5) {
+		outputEvenOdd.innerHTML = "Scegli un numero da 1 a 5!";
+		outputEvenOdd.className = "yellow";
 	} else {
-		outputEvenOdd.innerHTML = "Hai perso!";
-		outputEvenOdd.className = "red";
+		let userEven = false;
+		if (inputEvenOdd.toLowerCase() == "even") {
+			userEven = true;
+		}
+		const pcNumber = randomHandNumber();
+		outputNumberPc.innerHTML = pcNumber;
+		const sum = inputNumber + pcNumber;
+		if (userEven == isEven(sum)) {
+			outputEvenOdd.innerHTML = "Hai vinto!";
+			outputEvenOdd.className = "green";
+		} else {
+			outputEvenOdd.innerHTML = "Hai perso!";
+			outputEvenOdd.className = "red";
+		}
 	}
 });
 

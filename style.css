@@ -59,6 +59,11 @@ html {
 	color: crimson;
 }
 
+.yellow {
+	background-color: yellow;
+	color: orange;
+}
+
 .container {
 	width: min(80%, 800px);
 	margin: 3em auto;
