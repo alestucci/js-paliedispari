@@ -20,21 +20,20 @@ html {
     margin-top: 2em;
 }
 
+.mb-2 {
+    margin-bottom: 2em;
+}
+
 .m-2 {
-    margin-bottom: 1.5em;
+    margin: 2em;
 }
 
 .p-2 {
     padding: 2em;
 }
 
-.container {
-    width: min(80%, 800px);
-    margin: 3em auto;
-    text-align: center;
-    border: .5px solid lightgrey;
-    border-radius: 10px;
-    box-shadow: 0px 10px 15px 5px rgba(154,154,154,0.75);
+.w-100 {
+    width: 100%;
 }
 
 .block {
@@ -46,26 +45,8 @@ html {
     margin-right: auto;
 }
 
-.w-100 {
-    width: 100%;
-}
-
-#number {
-    width: 5em;
-    text-align: center;
-}
-
 .underline {
     text-decoration: underline;
-}
-
-#palindrome-output,
-#even-odd-output {
-    min-height: 2.5em;
-    line-height: 2.5em;
-    vertical-align: middle;
-    border: lightgrey 1px solid;
-    border-radius: .5em;
 }
 
 .green {
@@ -77,11 +58,35 @@ html {
     background-color: lightcoral;
     color: crimson;
 }
+
+.container {
+    width: min(80%, 800px);
+    margin: 3em auto;
+    text-align: center;
+    border: .5px solid lightgrey;
+    border-radius: 10px;
+    box-shadow: 0px 10px 15px 5px rgba(154,154,154,0.75);
+}
+
+#palindrome-output,
+#even-odd-output {
+    min-height: 2.5em;
+    line-height: 2.5em;
+    vertical-align: middle;
+    border: lightgrey 1px solid;
+    border-radius: 3px;
+}
+
 input,
 select {
     height: 2.5em;
     text-align: center;
     margin: 0 1em;
+}
+
+#number {
+    width: 5em;
+    text-align: center;
 }
 
 a.button {

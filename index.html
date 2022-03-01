@@ -10,23 +10,25 @@
 	<body>
 		<div class="container p-2">
             <h2>Scopri se la parola è &#128260; palindroma &#128260;</h2>
-            <label for="word" class="block mt-1-5">Inserisci una parola o un'espressione</label>
-            <input type="text" id="word" class="center w-100 m-2"/>
+            <label for="user-input" class="block mt-1-5">Inserisci una parola o un'espressione</label>
+            <input type="text" id="user-input" class="center w-100 m-2"/>
             <div>
-                <a href="#" class="button" id="check">Check</a>
-            </div>
-            <div>
-                <h3 id="palindrome-output">. . .</h3>
+                <a href="#!" class="button" id="check">Check</a>
             </div>
             <div class="m-2">
-                <a href="#" class="button" id="reset-palindrome">Reset</a>
+                <h3 id="palindrome-output">. . .</h3>
+            </div>
+            <div>
+                <a href="#!" class="button" id="reset-palindrome">Reset</a>
             </div>
         </div>
         <div class="container p-2">
             <h2>Gioca a &#129305; Pari o dispari &#129306;</h2>
-            <label for="number">Inserisci un numero da 1 a 5</label>
-            <input type="number" id="number" min="1" max="5" />
-            <div>
+            <div class="m-2">
+                <label for="number" class="mt-1-5">Inserisci un numero da 1 a 5</label>
+                <input type="number" id="number" min="1" max="5" />
+            </div>
+            <div class="m-2">
                 <label for="selection">Scegli <span class="underline">pari</span> o <span class="underline">dispari</span></label>
                 <select name="selection" id="selection">
                     <option value="even">Pari</option>
@@ -34,11 +36,14 @@
                 </select>
             </div>
             <div>
-                <a href="#" class="button" id="play">Gioca</a>
+                <a href="#!" class="button" id="play">Gioca</a>
             </div>
-            <h4>Il computer gioca con <span id="pc-number">...</span></h4>
-            <div>
+            <h4 class="m-2">Il computer gioca con <span id="pc-number">...</span></h4>
+            <div class="m-2">
                 <h3 id="even-odd-output">. . .</h3>
+            </div>
+            <div>
+                <a href="#!" class="button" id="reset-even-odd">Reset</a>
             </div>
 		</div>
 s

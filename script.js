@@ -4,24 +4,28 @@ Chiedere all’utente di inserire una parola
 Creare una funzione per capire se la parola inserita è palindroma
 */
 
-function isPalindrome(word) {
-	let wordInverse = "";
-	for (let index = word.length - 1; index >= 0; index--) {
-		wordInverse += word[index];
+function isPalindrome(inputString) {
+	let inputStringInverse = "";
+	for (let index = inputString.length - 1; index >= 0; index--) {
+		inputStringInverse += inputString[index];
 	}
-	if (word == wordInverse) {
+	if (inputString == inputStringInverse) {
 		return true;
 	} else {
 		return false;
 	}
 }
 
-let inputPalindrome = document.querySelector("#word");
+let inputPalindrome = document.querySelector("#user-input");
 let checkBtnPalindrome = document.querySelector("#check");
 let outputPalindrome = document.querySelector("#palindrome-output");
 
 checkBtnPalindrome.addEventListener("click", function () {
-	if (isPalindrome(inputPalindrome.value.toLowerCase())) {
+	if (inputPalindrome.value == "") {
+		outputPalindrome.innerHTML =
+			"Si prega di inserire una parola o un'espressione";
+		outputPalindrome.className = "red";
+	} else if (isPalindrome(inputPalindrome.value.toLowerCase())) {
 		outputPalindrome.innerHTML = "La parola inserita è palindroma";
 		outputPalindrome.className = "green";
 	} else {
@@ -30,10 +34,12 @@ checkBtnPalindrome.addEventListener("click", function () {
 	}
 });
 
-let resetBtnPalindrome = document.querySelector('#reset-palindrome');
+let resetBtnPalindrome = document.querySelector("#reset-palindrome");
 
 resetBtnPalindrome.addEventListener("click", function () {
 	inputPalindrome.value = "";
+	outputPalindrome.innerHTML = ". . .";
+	outputPalindrome.className = "";
 });
 
 /*
@@ -44,7 +50,8 @@ Sommiamo i due numeri
 Stabiliamo se la somma dei due numeri è pari o dispari (usando una funzione)
 Dichiariamo chi ha vinto.
 */
-
+let inputNumber = parseInt(document.querySelector("#number").value);
+let inputEvenOdd = document.querySelector("#selection").value;
 let playBtnEvenOdd = document.querySelector("#play");
 let outputNumberPc = document.querySelector("#pc-number");
 let outputEvenOdd = document.querySelector("#even-odd-output");
@@ -63,9 +70,9 @@ function isEven(number) {
 }
 
 playBtnEvenOdd.addEventListener("click", function () {
-	let inputNumber = parseInt(document.querySelector("#number").value);
-    let inputEvenOdd = document.querySelector("#selection").value;
-    let userEven = false;
+	inputNumber = parseInt(document.querySelector("#number").value);
+	inputEvenOdd = document.querySelector("#selection").value;
+	let userEven = false;
 	if (inputEvenOdd.toLowerCase() == "even") {
 		userEven = true;
 	}
@@ -81,4 +88,13 @@ playBtnEvenOdd.addEventListener("click", function () {
 		outputEvenOdd.innerHTML = "Hai perso!";
 		outputEvenOdd.className = "red";
 	}
+});
+
+let resetBtnEvenOdd = document.querySelector("#reset-even-odd");
+
+resetBtnEvenOdd.addEventListener("click", function () {
+	document.querySelector("#number").value = 1;
+	document.querySelector("#selection").selectedIndex = 0;
+	outputEvenOdd.innerHTML = ". . .";
+	outputEvenOdd.className = "";
 });
